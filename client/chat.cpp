@@ -122,8 +122,8 @@ void Chat::selectAction(int action)
                 std::cout << "username: ";
             }
         } */
+        log.write("all", username_, msg);
         conn_to_db_.sendMessage("all", msg, current_user_id_);
-        log.write("all", username, msg);
         break;
     }
 }
